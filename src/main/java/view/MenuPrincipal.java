@@ -27,10 +27,48 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         Lbl_MenuPrincipal = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu_Cadastro = new javax.swing.JMenu();
+        jMenuItem_Cliente = new javax.swing.JMenuItem();
+        jMenuItem_Serviço = new javax.swing.JMenuItem();
+        jMenu2_Operação = new javax.swing.JMenu();
+        jMenuItem_Agenda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Lbl_MenuPrincipal.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\fundo-MenuPrincipal.jpg")); // NOI18N
+
+        jMenu_Cadastro.setText("Cadastro");
+
+        jMenuItem_Cliente.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\icons\\cliente32-icon.png")); // NOI18N
+        jMenuItem_Cliente.setText("Cliente");
+        jMenuItem_Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_ClienteActionPerformed(evt);
+            }
+        });
+        jMenu_Cadastro.add(jMenuItem_Cliente);
+
+        jMenuItem_Serviço.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\icons\\tesoura32-icon.png")); // NOI18N
+        jMenuItem_Serviço.setText("Serviço");
+        jMenu_Cadastro.add(jMenuItem_Serviço);
+
+        jMenuBar1.add(jMenu_Cadastro);
+
+        jMenu2_Operação.setText("Operação");
+
+        jMenuItem_Agenda.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\icons\\agenda32-icon.png")); // NOI18N
+        jMenuItem_Agenda.setText("Agenda");
+        jMenuItem_Agenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem_AgendaActionPerformed(evt);
+            }
+        });
+        jMenu2_Operação.add(jMenuItem_Agenda);
+
+        jMenuBar1.add(jMenu2_Operação);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -47,6 +85,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_ClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem_ClienteActionPerformed
+
+    private void jMenuItem_AgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AgendaActionPerformed
+
+    }//GEN-LAST:event_jMenuItem_AgendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,5 +131,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Lbl_MenuPrincipal;
+    private javax.swing.JMenu jMenu2_Operação;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem_Agenda;
+    private javax.swing.JMenuItem jMenuItem_Cliente;
+    private javax.swing.JMenuItem jMenuItem_Serviço;
+    private javax.swing.JMenu jMenu_Cadastro;
     // End of variables declaration//GEN-END:variables
 }

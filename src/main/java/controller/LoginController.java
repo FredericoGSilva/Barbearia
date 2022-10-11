@@ -6,6 +6,7 @@ package controller;
 
 import controller.helper.LoginHelper;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import model.Usuario;
 import model.dao.UsuarioDAO;
@@ -38,8 +39,8 @@ public class LoginController {
             } else {
                 JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos.");
             }
-        } catch (Exception e) {
-        
+        } catch (SQLException ex) {
+            view.mensagem("Erro na classe LoginController: " + ex);
         }
        
     }

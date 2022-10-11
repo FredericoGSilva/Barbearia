@@ -5,6 +5,7 @@
 package view;
 
 import controller.LoginController;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -135,6 +136,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPassword_Senha;
     // End of variables declaration//GEN-END:variables
 
+    public void mensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+    
     public javax.swing.JTextField getTxt_Usuario() {
         return Txt_Usuario;
     }
