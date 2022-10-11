@@ -16,10 +16,9 @@ import model.Usuario;
  */
 public class UsuarioDAO {
     
-    Connection conexao;
+    Connection conexao = new Banco().conector();
     
     public ResultSet autenticaUsuario(Usuario usuario) {
-        conexao = new Banco().conector();
         try {
             String url = "select * from tb_Usuario where nome=? and senha=?";
             PreparedStatement preparaConsulta = conexao.prepareStatement(url);
