@@ -4,17 +4,20 @@
  */
 package view;
 
+import controller.MenuPrincipalController;
+
 /**
  *
  * @author Frederico
  */
 public class MenuPrincipal extends javax.swing.JFrame {
-
+        private final MenuPrincipalController controller;
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        controller = new MenuPrincipalController(this);
     }
 
     /**
@@ -91,7 +94,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem_ClienteActionPerformed
 
     private void jMenuItem_AgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem_AgendaActionPerformed
-
+        controller.navegarParaAgenda();
     }//GEN-LAST:event_jMenuItem_AgendaActionPerformed
 
     /**
@@ -138,4 +141,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem_Serviço;
     private javax.swing.JMenu jMenu_Cadastro;
     // End of variables declaration//GEN-END:variables
+ 
+
 }
