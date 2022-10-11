@@ -18,10 +18,10 @@ public class UsuarioDAO {
     
     Connection conexao;
     
-    public ResultSet loginUsuario(Usuario usuario) {
+    public ResultSet autenticaUsuario(Usuario usuario) {
         conexao = new Banco().conector();
         try {
-            String url = "select * from tb_Usuario where (usuario=? and senha=?)";
+            String url = "select * from tb_Usuario where nome=? and senha=?";
             PreparedStatement preparaConsulta = conexao.prepareStatement(url);
             preparaConsulta.setString(1, usuario.getNome());
             preparaConsulta.setString(2, usuario.getSenha());

@@ -4,6 +4,7 @@
  */
 package controller.helper;
 
+import model.Usuario;
 import view.Login;
 
 /**
@@ -17,9 +18,11 @@ public class LoginHelper {
         this.view = view;
     }
     
-    public void obtarDados() {
+    public Usuario obterLogin() {
         String nome = view.getTxt_Usuario().getText();
         String senha = view.getjPassword_Senha().getText();
+        Usuario usuario = new Usuario(nome, senha);
+        return usuario;
     }
     
 }

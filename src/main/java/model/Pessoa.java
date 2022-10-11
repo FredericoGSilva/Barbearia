@@ -42,6 +42,10 @@ public abstract class Pessoa {
         this.id = id;
     }
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
     public int getId() {
         return id;
     }

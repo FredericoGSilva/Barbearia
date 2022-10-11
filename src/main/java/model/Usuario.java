@@ -22,6 +22,11 @@ public class Usuario extends Pessoa {
         super(id, nome);
         this.senha = senha;
     }
+
+    public Usuario(String nome, String senha) {
+        super(nome);
+        this.senha = senha;
+    }
     
     public String getSenha() {
         return senha;
