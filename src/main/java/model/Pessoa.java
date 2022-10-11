@@ -66,6 +66,14 @@ public abstract class Pessoa {
         this.sexo = sexo;
     }
 
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
     public String getTelefone() {
         return telefone;
     }
