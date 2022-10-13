@@ -18,12 +18,13 @@ public class Cliente extends Pessoa {
         this.cep = cep;
     }
 
-    public Cliente(int id, String nome) {
-        super(id, nome);
-    }
-
     public Cliente() {
         super(null);
+    }
+
+    @Override
+    public String toString() {
+        return getNome();
     }
     
     public String getEndereco() {

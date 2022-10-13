@@ -27,18 +27,19 @@ public class ClienteDAO {
             statement.execute();
             ResultSet resultSet = statement.getResultSet();
             while (resultSet.next()) {
-                Cliente cliente = new Cliente();
-                cliente.setId(resultSet.getInt("id"));
-                cliente.setNome(resultSet.getString("nome"));
-                cliente.setSexo(resultSet.getString("sexo"));
-                cliente.setDataNascimento(resultSet.getDate("dataNascimento"));
-                cliente.setTelefone(resultSet.getString("telefone"));
-                cliente.setEmail(resultSet.getString("email"));
-                cliente.setRg(resultSet.getString("rg"));
-                cliente.setEndereco(resultSet.getString("endereco"));
-                cliente.setCep(resultSet.getString("cp"));
+                int id = resultSet.getInt("id");
+                String nome = resultSet.getString("nome");
+                String sexo = resultSet.getString("sexo");
+                String dataNascimento = resultSet.getString("dataNascimento");
+                String telefone = resultSet.getString("telefone");
+                String email = resultSet.getString("email");       
+                String rg = resultSet.getString("rg");
+                String endereco =resultSet.getString("endereco");
+                String cep = resultSet.getString("cp");
+                Cliente cliente = new Cliente(id, nome, sexo, dataNascimento, telefone, email, rg, endereco, cep);      
                 listaClientes.add(cliente);
             }
+            
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro na classe ClienteDAO: " + ex);
         }
