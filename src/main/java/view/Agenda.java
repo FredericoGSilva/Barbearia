@@ -243,6 +243,22 @@ public class Agenda extends javax.swing.JFrame {
         this.jTable1_Agendamentos = jTable1_Agendamentos;
     }
 
+    public javax.swing.JComboBox<String> getjComboBox_Cliente() {
+        return jComboBox_Cliente;
+    }
+
+    public void setjComboBox_Cliente(javax.swing.JComboBox<String> jComboBox_Cliente) {
+        this.jComboBox_Cliente = jComboBox_Cliente;
+    }
+
+    public javax.swing.JComboBox<String> getjComboBox_Servico() {
+        return jComboBox_Servico;
+    }
+
+    public void setjComboBox_Servico(javax.swing.JComboBox<String> jComboBox_Servico) {
+        this.jComboBox_Servico = jComboBox_Servico;
+    }
+
     
 
 }

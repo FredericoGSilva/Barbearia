@@ -5,8 +5,10 @@
 package controller.helper;
 
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import model.Agendamento;
+import model.Cliente;
 import view.Agenda;
 
 /**
@@ -33,6 +35,14 @@ public class AgendaHelper {
                 agendamento.getDataFormatada(),
                 agendamento.getHoraFormatada()
             });
+        }
+        
+    }
+    
+    public void preencherClientes(ArrayList<Cliente> listaClientes) {
+        DefaultComboBoxModel comboBox = (DefaultComboBoxModel) view.getjComboBox_Cliente().getModel();
+        for (Cliente listaCliente : listaClientes) {
+            comboBox.addElement(listaCliente);
         }
         
     }
