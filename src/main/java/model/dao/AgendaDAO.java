@@ -4,16 +4,10 @@
  */
 package model.dao;
 
-import java.sql.Connection;
-import java.util.ArrayList;
-
 /**
  *
  * @author Frederico
  */
 public class AgendaDAO {
-    
-    Connection conector = new Banco().conector();
-    
-    public ArrayList<A>
+
 }
