@@ -4,21 +4,16 @@
  */
 package view;
 
-import controller.AgendaController;
-
 /**
  *
  * @author Frederico
  */
 public class Agenda extends javax.swing.JFrame {
-    private final AgendaController controller;
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
-        controller = new AgendaController(this);
-        iniciarComponentes();
     }
 
     /**
@@ -230,10 +225,6 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTable jTable1_Agendamentos;
     private javax.swing.JTextArea jTextArea1_Observacao;
     // End of variables declaration//GEN-END:variables
-
-    public void iniciarComponentes() {
-        controller.atualizaTabela();
-    }
     
     public javax.swing.JTable getjTable1_Agendamentos() {
         return jTable1_Agendamentos;
