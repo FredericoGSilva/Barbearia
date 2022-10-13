@@ -25,11 +25,12 @@ public class ServicoDAO {
         try {
             String sql = "select * from tb_Servico";
             PreparedStatement statement = conector.prepareStatement(sql);
+            statement.execute();
             ResultSet resultSet = statement.getResultSet();
             while (resultSet.next()) {
                 Servico servico = new Servico();
                 servico.setId(resultSet.getInt("id"));
-                servico.setDescricao("descricao");
+                servico.setDescricao(resultSet.getString("descricao"));
                 servico.setValor(resultSet.getFloat("valor"));
                 listaServico.add(servico);
             }

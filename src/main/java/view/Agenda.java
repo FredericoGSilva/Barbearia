@@ -234,6 +234,7 @@ public class Agenda extends javax.swing.JFrame {
     public void iniciar() {
         controller.atualizarTabela();
         controller.atualizarCliente();
+        controller.atualizarServico();
     }
     
     public javax.swing.JTable getjTable1_Agendamentos() {

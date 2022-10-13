@@ -8,8 +8,10 @@ import controller.helper.AgendaHelper;
 import java.util.ArrayList;
 import model.Agendamento;
 import model.Cliente;
+import model.Servico;
 import model.dao.AgendaDAO;
 import model.dao.ClienteDAO;
+import model.dao.ServicoDAO;
 import view.Agenda;
 
 /**
@@ -38,4 +40,9 @@ public class AgendaController {
         helper.preencherClientes(listaClientes);
     }
     
+    public void atualizarServico() {
+        ServicoDAO servicoDAO = new ServicoDAO();
+        ArrayList<Servico> listaServico = servicoDAO.recuperarDados();
+        helper.preencherServicos(listaServico);
+    }
 }
