@@ -78,7 +78,7 @@ public class Agenda extends javax.swing.JFrame {
 
         Lbl_Servico.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Servico.setForeground(new java.awt.Color(255, 255, 255));
-        Lbl_Servico.setText("Servico:");
+        Lbl_Servico.setText("Serviço:");
         getContentPane().add(Lbl_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         jComboBox_Servico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
