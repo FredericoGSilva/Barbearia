@@ -20,7 +20,7 @@ public class ClienteDAO {
     Connection conector = new Banco().conector();
     ArrayList<Cliente> listaClientes = new ArrayList<>();
     
-    public ArrayList<Cliente> recuperarNome() {
+    public ArrayList<Cliente> recuperarDados() {
         try {
             String url = "select * from tb_Clientes";
             PreparedStatement statement = conector.prepareStatement(url);

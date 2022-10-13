@@ -7,7 +7,9 @@ package controller;
 import controller.helper.AgendaHelper;
 import java.util.ArrayList;
 import model.Agendamento;
+import model.Cliente;
 import model.dao.AgendaDAO;
+import model.dao.ClienteDAO;
 import view.Agenda;
 
 /**
@@ -17,6 +19,7 @@ import view.Agenda;
 public class AgendaController {
     private final Agenda view;
     private final AgendaHelper helper;
+    
     
     public AgendaController(Agenda view) {
         this.view = view;
@@ -29,5 +32,10 @@ public class AgendaController {
         helper.preencherTabela(listaAdendamento);
     }
 
+    public void atualizarCliente() {
+        ClienteDAO clienteDAO = new ClienteDAO();
+        ArrayList<Cliente> listaClientes = clienteDAO.recuperarDados();
+        helper.preencherClientes(listaClientes);
+    }
     
 }
