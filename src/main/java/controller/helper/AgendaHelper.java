@@ -54,4 +54,8 @@ public class AgendaHelper {
         }
     }
     
+    public Servico obterServico() {
+        return (Servico) view.getjComboBox_Servico().getSelectedItem();
+    }
+    
 }

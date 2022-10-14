@@ -261,6 +261,14 @@ public class Agenda extends javax.swing.JFrame {
         this.jComboBox_Servico = jComboBox_Servico;
     }
 
+    public javax.swing.JTextField getTxt_Valor() {
+        return Txt_Valor;
+    }
+
+    public void setTxt_Valor(javax.swing.JTextField Txt_Valor) {
+        this.Txt_Valor = Txt_Valor;
+    }
+
     
 
 }
