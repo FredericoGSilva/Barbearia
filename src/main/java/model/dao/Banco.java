@@ -17,7 +17,7 @@ public class Banco {
     public static Connection conector() {
          Connection conexao = null;
          try {
-            String url = "";
+            String url = "jdbc:mysql://127.0.0.1:3306/barbearia?user=root&password=abril1999";
             conexao = DriverManager.getConnection(url);
             return  conexao;
         } catch (SQLException ex) {

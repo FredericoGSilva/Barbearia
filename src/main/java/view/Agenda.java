@@ -82,6 +82,11 @@ public class Agenda extends javax.swing.JFrame {
         getContentPane().add(Lbl_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
         jComboBox_Servico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBox_Servico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox_ServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(jComboBox_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 280, -1));
 
         Lbl_Valor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -172,6 +177,10 @@ public class Agenda extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Button_VoltarActionPerformed
 
+    private void jComboBox_ServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_ServicoItemStateChanged
+        controller.atualizarValor();
+    }//GEN-LAST:event_jComboBox_ServicoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -235,6 +244,7 @@ public class Agenda extends javax.swing.JFrame {
         controller.atualizarTabela();
         controller.atualizarCliente();
         controller.atualizarServico();
+        controller.atualizarValor();
     }
     
     public javax.swing.JTable getjTable1_Agendamentos() {

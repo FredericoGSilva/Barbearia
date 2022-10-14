@@ -45,4 +45,9 @@ public class AgendaController {
         ArrayList<Servico> listaServico = servicoDAO.recuperarDados();
         helper.preencherServicos(listaServico);
     }
+    
+    public void atualizarValor() {
+        Servico servico = helper.obterServico();
+        helper.setarValor(servico.getValor());
+    }
 }
