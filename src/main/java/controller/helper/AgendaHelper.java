@@ -58,4 +58,8 @@ public class AgendaHelper {
         return (Servico) view.getjComboBox_Servico().getSelectedItem();
     }
     
+    public void setarValor(float valor) {
+        view.getTxt_Valor().setText(valor + "");
+    }
+    
 }
