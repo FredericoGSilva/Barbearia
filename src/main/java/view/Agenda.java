@@ -30,8 +30,8 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Lbl_Nome = new javax.swing.JLabel();
-        Txt_Nome = new javax.swing.JTextField();
+        Lbl_Id = new javax.swing.JLabel();
+        Txt_Id = new javax.swing.JTextField();
         Lbl_Cliente = new javax.swing.JLabel();
         jComboBox_Cliente = new javax.swing.JComboBox<>();
         Lbl_Servico = new javax.swing.JLabel();
@@ -55,18 +55,19 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lbl_Nome.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Lbl_Nome.setForeground(new java.awt.Color(255, 255, 255));
-        Lbl_Nome.setText("Nome:");
-        getContentPane().add(Lbl_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
+        Lbl_Id.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Lbl_Id.setForeground(new java.awt.Color(255, 255, 255));
+        Lbl_Id.setText("Id:");
+        getContentPane().add(Lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
 
-        Txt_Nome.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Txt_Nome.addActionListener(new java.awt.event.ActionListener() {
+        Txt_Id.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Txt_Id.setToolTipText("");
+        Txt_Id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Txt_NomeActionPerformed(evt);
+                Txt_IdActionPerformed(evt);
             }
         });
-        getContentPane().add(Txt_Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 280, -1));
+        getContentPane().add(Txt_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 280, -1));
 
         Lbl_Cliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Cliente.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,9 +170,9 @@ public class Agenda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Txt_NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_NomeActionPerformed
+    private void Txt_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_IdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_Txt_NomeActionPerformed
+    }//GEN-LAST:event_Txt_IdActionPerformed
 
     private void Button_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_VoltarActionPerformed
 
@@ -224,13 +225,13 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Cliente;
     private javax.swing.JLabel Lbl_Data;
     private javax.swing.JLabel Lbl_Hora;
-    private javax.swing.JLabel Lbl_Nome;
+    private javax.swing.JLabel Lbl_Id;
     private javax.swing.JLabel Lbl_Observacao;
     private javax.swing.JLabel Lbl_Servico;
     private javax.swing.JLabel Lbl_Valor;
     private javax.swing.JTextField Txt_Data;
     private javax.swing.JTextField Txt_Hora;
-    private javax.swing.JTextField Txt_Nome;
+    private javax.swing.JTextField Txt_Id;
     private javax.swing.JTextField Txt_Valor;
     private javax.swing.JComboBox<String> jComboBox_Cliente;
     private javax.swing.JComboBox<String> jComboBox_Servico;
@@ -278,6 +279,32 @@ public class Agenda extends javax.swing.JFrame {
     public void setTxt_Valor(javax.swing.JTextField Txt_Valor) {
         this.Txt_Valor = Txt_Valor;
     }
+
+    public javax.swing.JTextField getTxt_Data() {
+        return Txt_Data;
+    }
+
+    public void setTxt_Data(javax.swing.JTextField Txt_Data) {
+        this.Txt_Data = Txt_Data;
+    }
+
+    public javax.swing.JTextField getTxt_Hora() {
+        return Txt_Hora;
+    }
+
+    public void setTxt_Hora(javax.swing.JTextField Txt_Hora) {
+        this.Txt_Hora = Txt_Hora;
+    }
+
+    public javax.swing.JTextField getTxt_Id() {
+        return Txt_Id;
+    }
+
+    public void setTxt_Id(javax.swing.JTextField Txt_Id) {
+        this.Txt_Id = Txt_Id;
+    }
+    
+    
 
     
 

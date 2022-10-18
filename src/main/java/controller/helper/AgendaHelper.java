@@ -16,7 +16,7 @@ import view.Agenda;
  *
  * @author Frederico
  */
-public class AgendaHelper {
+public class AgendaHelper implements IHelper {
     private final Agenda view;
 
     public AgendaHelper(Agenda view) {
@@ -62,4 +62,27 @@ public class AgendaHelper {
         view.getTxt_Valor().setText(valor + "");
     }
     
+    public Cliente obterCliente() {
+        return (Cliente) view.getjComboBox_Cliente().getSelectedItem();
+    }
+        // Essa função irá capturar os dados da interface Agenda para através do Controller e DAO os dados serem inseridos no banco de dados.
+
+    @Override
+    public Agendamento obterModelo() {
+        int id = Integer.parseInt(view.getTxt_Id().getText()) ;
+        Cliente cliente = obterCliente();
+        Servico servico = obterServico();
+        float valor = Float.parseFloat(view.getTxt_Valor().getText());
+        String data = view.getTxt_Data().getText();
+        String hora = view.getTxt_Hora().getText();
+        String dataHora = data + "" + hora;
+        Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora);
+        return agendamento;
+    }
+
+    @Override
+    public void limparTelas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

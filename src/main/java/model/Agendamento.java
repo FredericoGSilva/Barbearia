@@ -20,17 +20,15 @@ public class Agendamento {
     private Servico servico;
     private float valor;
     private Date data;
-    private Date hora;
     private String observacao;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String hora) {
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
         this.valor = valor;
         try {
-            this.data = new SimpleDateFormat("dd/MM/yyyy").parse(data);
-            this.hora = new SimpleDateFormat("HH:mm").parse(hora);
+            this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
         } catch (ParseException ex) {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -82,21 +80,13 @@ public class Agendamento {
     public String getDataFormatada() {
         return new SimpleDateFormat("dd/MM/yyyy").format(data);
     }
+    
+    public String getHoraFormatada() {
+        return new SimpleDateFormat("HH:mm").format(data);
+    }
 
     public void setData(Date data) {
         this.data = data;
-    }
-
-    public Date getHora() {
-        return hora;
-    }
-    
-    public String getHoraFormatada() {
-        return new SimpleDateFormat("HH:mm").format(hora);
-    }
-
-    public void setHora(Date hora) {
-        this.hora = hora;
     }
     
     public String getObservacao() {

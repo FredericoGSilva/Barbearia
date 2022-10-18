@@ -37,7 +37,8 @@ public class AgendaDAO {
                 float valor = resultSet.getFloat("valor");
                 String data = resultSet.getString("dataAgendamento");
                 String hora = resultSet.getString("hora");
-                Agendamento agendamento = new Agendamento(id, cliente, servico, valor, data, hora);
+                String dataHora = data + " " + hora;
+                Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora);
                 listaAgendamento.add(agendamento);
             }
         } catch (SQLException ex) {

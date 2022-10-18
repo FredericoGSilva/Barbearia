@@ -29,7 +29,7 @@ public class LoginController {
     
     public void usuarioLogin() {
         try {
-            Usuario usuario = helper.obterLogin();
+            Usuario usuario = helper.obterModelo();
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             ResultSet autenticado = usuarioDAO.autenticaUsuario(usuario);
             if (autenticado.next()) {

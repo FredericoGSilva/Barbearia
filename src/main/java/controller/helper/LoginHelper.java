@@ -11,18 +11,25 @@ import view.Login;
  *
  * @author Frederico
  */
-public class LoginHelper {
+public class LoginHelper implements IHelper {
     private final Login view;
 
     public LoginHelper(Login view) {
         this.view = view;
     }
-    
-    public Usuario obterLogin() {
+
+    @Override
+    public Usuario obterModelo() {
         String nome = view.getTxt_Usuario().getText();
         String senha = view.getjPassword_Senha().getText();
         Usuario usuario = new Usuario(nome, senha);
         return usuario;
+    }
+
+    @Override
+    public void limparTelas() {
+        view.getTxt_Usuario().setText("");
+        view.getjPassword_Senha().setText("");
     }
     
 }

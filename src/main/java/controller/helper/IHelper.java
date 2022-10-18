@@ -10,5 +10,7 @@ package controller.helper;
  */
 public interface IHelper {
     
-    abstract void obterModelo();
+    abstract Object obterModelo();
+    
+    abstract void limparTelas();
 }
