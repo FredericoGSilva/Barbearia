@@ -133,6 +133,11 @@ public class Agenda extends javax.swing.JFrame {
         Button_Agendar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Button_Agendar.setForeground(new java.awt.Color(255, 255, 255));
         Button_Agendar.setText("Agendar");
+        Button_Agendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_AgendarActionPerformed(evt);
+            }
+        });
         getContentPane().add(Button_Agendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 550, 420, -1));
 
         jTable1_Agendamentos.setModel(new javax.swing.table.DefaultTableModel(
@@ -170,10 +175,6 @@ public class Agenda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Txt_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_IdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Txt_IdActionPerformed
-
     private void Button_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_VoltarActionPerformed
 
     }//GEN-LAST:event_Button_VoltarActionPerformed
@@ -181,6 +182,14 @@ public class Agenda extends javax.swing.JFrame {
     private void jComboBox_ServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_ServicoItemStateChanged
         controller.atualizarValor();
     }//GEN-LAST:event_jComboBox_ServicoItemStateChanged
+
+    private void Txt_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_IdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Txt_IdActionPerformed
+
+    private void Button_AgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AgendarActionPerformed
+        controller.inserirDadosBanco();
+    }//GEN-LAST:event_Button_AgendarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -296,6 +305,14 @@ public class Agenda extends javax.swing.JFrame {
         this.Txt_Hora = Txt_Hora;
     }
 
+    public javax.swing.JTextArea getjTextArea1_Observacao() {
+        return jTextArea1_Observacao;
+    }
+
+    public void setjTextArea1_Observacao(javax.swing.JTextArea jTextArea1_Observacao) {
+        this.jTextArea1_Observacao = jTextArea1_Observacao;
+    }
+
     public javax.swing.JTextField getTxt_Id() {
         return Txt_Id;
     }
@@ -303,9 +320,6 @@ public class Agenda extends javax.swing.JFrame {
     public void setTxt_Id(javax.swing.JTextField Txt_Id) {
         this.Txt_Id = Txt_Id;
     }
-    
-    
-
     
 
 }

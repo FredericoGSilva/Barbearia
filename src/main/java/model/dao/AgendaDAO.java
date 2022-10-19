@@ -47,4 +47,19 @@ public class AgendaDAO {
         return listaAgendamento;
     }
     
+    public void inserirDados(Agendamento agendamento) {
+        try {
+            String sql = "insert into tb_Agendamento(cliente, servico, valor, dataAgendamento, hora) values (?, ?, ?, ?, ?)";
+            PreparedStatement statement = conector.prepareStatement(sql);
+            statement.setString(1, agendamento.getCliente().getNome());
+            statement.setString(2, agendamento.getServico().getDescricao());
+            statement.setFloat(3, agendamento.getValor());
+            statement.setString(4, agendamento.getDataFormatada());
+            statement.setString(5, agendamento.getHoraFormatada());
+            statement.execute();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO: " + ex);
+        }
+    }
+    
 }

@@ -50,4 +50,9 @@ public class AgendaController {
         Servico servico = helper.obterServico();
         helper.setarValor(servico.getValor());
     }
+    
+    public void inserirDadosBanco() {
+        AgendaDAO agendaDAO = new AgendaDAO();
+        agendaDAO.inserirDados(helper.obterModelo());
+    }
 }

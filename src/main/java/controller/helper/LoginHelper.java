@@ -25,11 +25,5 @@ public class LoginHelper implements IHelper {
         Usuario usuario = new Usuario(nome, senha);
         return usuario;
     }
-
-    @Override
-    public void limparTelas() {
-        view.getTxt_Usuario().setText("");
-        view.getjPassword_Senha().setText("");
-    }
     
 }

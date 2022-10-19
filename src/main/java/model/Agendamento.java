@@ -22,8 +22,8 @@ public class Agendamento {
     private Date data;
     private String observacao;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
-        this.id = id;
+    public Agendamento(Cliente cliente, Servico servico, float valor, String data) {
+        //this.id = id;
         this.cliente = cliente;
         this.servico = servico;
         this.valor = valor;
@@ -35,7 +35,12 @@ public class Agendamento {
         
         // this.observacao = observacao;
     }
-
+    
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
+        this(cliente, servico, valor, data);
+        this.id = id;
+    }
+    
     public Agendamento(int id, Cliente cliente) {
         this.id = id;
         this.cliente = cliente;
@@ -88,6 +93,19 @@ public class Agendamento {
     public void setData(Date data) {
         this.data = data;
     }
+    /*
+    public Date getHora() {
+        return hora;
+    }
+    
+    public String getHoraFormatada() {
+        return new SimpleDateFormat("HH:mm").format(hora);
+    }
+    
+    public void setHora(Date hora) {
+        this.hora = hora;
+    }
+*/
     
     public String getObservacao() {
         return observacao;
