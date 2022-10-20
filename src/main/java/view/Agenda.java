@@ -30,8 +30,6 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Lbl_Id = new javax.swing.JLabel();
-        Txt_Id = new javax.swing.JTextField();
         Lbl_Cliente = new javax.swing.JLabel();
         jComboBox_Cliente = new javax.swing.JComboBox<>();
         Lbl_Servico = new javax.swing.JLabel();
@@ -55,32 +53,18 @@ public class Agenda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Lbl_Id.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        Lbl_Id.setForeground(new java.awt.Color(255, 255, 255));
-        Lbl_Id.setText("Id:");
-        getContentPane().add(Lbl_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, -1, -1));
-
-        Txt_Id.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        Txt_Id.setToolTipText("");
-        Txt_Id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Txt_IdActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Txt_Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 280, -1));
-
         Lbl_Cliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Cliente.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Cliente.setText("Cliente:");
-        getContentPane().add(Lbl_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+        getContentPane().add(Lbl_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, -1, -1));
 
         jComboBox_Cliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        getContentPane().add(jComboBox_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 280, -1));
+        getContentPane().add(jComboBox_Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 280, -1));
 
         Lbl_Servico.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Servico.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Servico.setText("Serviço:");
-        getContentPane().add(Lbl_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
+        getContentPane().add(Lbl_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
 
         jComboBox_Servico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jComboBox_Servico.addItemListener(new java.awt.event.ItemListener() {
@@ -88,40 +72,40 @@ public class Agenda extends javax.swing.JFrame {
                 jComboBox_ServicoItemStateChanged(evt);
             }
         });
-        getContentPane().add(jComboBox_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 280, -1));
+        getContentPane().add(jComboBox_Servico, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 280, -1));
 
         Lbl_Valor.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Valor.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Valor.setText("Valor R$:");
-        getContentPane().add(Lbl_Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, -1, -1));
+        getContentPane().add(Lbl_Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, -1, -1));
 
         Txt_Valor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Txt_Valor.setText("0");
         Txt_Valor.setToolTipText("");
-        getContentPane().add(Txt_Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 280, -1));
+        getContentPane().add(Txt_Valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 280, -1));
 
         Lbl_Data.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Data.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Data.setText("Data:");
-        getContentPane().add(Lbl_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 490, -1, -1));
+        getContentPane().add(Lbl_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, -1, -1));
 
         Txt_Data.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Txt_Data.setToolTipText("");
-        getContentPane().add(Txt_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 490, 280, -1));
+        getContentPane().add(Txt_Data, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 280, -1));
 
         Lbl_Hora.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Hora.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Hora.setText("Hora:");
-        getContentPane().add(Lbl_Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, -1, -1));
+        getContentPane().add(Lbl_Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, -1, -1));
 
         Txt_Hora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Txt_Hora.setToolTipText("");
-        getContentPane().add(Txt_Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, 280, -1));
+        getContentPane().add(Txt_Hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 490, 280, -1));
 
         Lbl_Observacao.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         Lbl_Observacao.setForeground(new java.awt.Color(255, 255, 255));
         Lbl_Observacao.setText("Observação:");
-        getContentPane().add(Lbl_Observacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, -1, -1));
+        getContentPane().add(Lbl_Observacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 230, -1, -1));
 
         jTextArea1_Observacao.setColumns(20);
         jTextArea1_Observacao.setRows(5);
@@ -153,7 +137,7 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1_Agendamentos);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 650, 1110, 240));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 1170, 240));
 
         Button_Voltar.setBackground(new java.awt.Color(102, 255, 102));
         Button_Voltar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -182,10 +166,6 @@ public class Agenda extends javax.swing.JFrame {
     private void jComboBox_ServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_ServicoItemStateChanged
         controller.atualizarValor();
     }//GEN-LAST:event_jComboBox_ServicoItemStateChanged
-
-    private void Txt_IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_IdActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Txt_IdActionPerformed
 
     private void Button_AgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AgendarActionPerformed
         controller.inserirDadosBanco();
@@ -234,13 +214,11 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Cliente;
     private javax.swing.JLabel Lbl_Data;
     private javax.swing.JLabel Lbl_Hora;
-    private javax.swing.JLabel Lbl_Id;
     private javax.swing.JLabel Lbl_Observacao;
     private javax.swing.JLabel Lbl_Servico;
     private javax.swing.JLabel Lbl_Valor;
     private javax.swing.JTextField Txt_Data;
     private javax.swing.JTextField Txt_Hora;
-    private javax.swing.JTextField Txt_Id;
     private javax.swing.JTextField Txt_Valor;
     private javax.swing.JComboBox<String> jComboBox_Cliente;
     private javax.swing.JComboBox<String> jComboBox_Servico;
@@ -312,7 +290,7 @@ public class Agenda extends javax.swing.JFrame {
     public void setjTextArea1_Observacao(javax.swing.JTextArea jTextArea1_Observacao) {
         this.jTextArea1_Observacao = jTextArea1_Observacao;
     }
-
+/*
     public javax.swing.JTextField getTxt_Id() {
         return Txt_Id;
     }
@@ -320,6 +298,6 @@ public class Agenda extends javax.swing.JFrame {
     public void setTxt_Id(javax.swing.JTextField Txt_Id) {
         this.Txt_Id = Txt_Id;
     }
-    
+  */  
 
 }

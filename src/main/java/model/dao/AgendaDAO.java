@@ -38,7 +38,8 @@ public class AgendaDAO {
                 String data = resultSet.getString("dataAgendamento");
                 String hora = resultSet.getString("hora");
                 String dataHora = data + " " + hora;
-                Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora);
+                String observacao = resultSet.getString("observacao");
+                Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
                 listaAgendamento.add(agendamento);
             }
         } catch (SQLException ex) {
@@ -49,13 +50,14 @@ public class AgendaDAO {
     
     public void inserirDados(Agendamento agendamento) {
         try {
-            String sql = "insert into tb_Agendamento(cliente, servico, valor, dataAgendamento, hora) values (?, ?, ?, ?, ?)";
+            String sql = "insert into tb_Agendamento(cliente, servico, valor, dataAgendamento, hora, observacao) values (?, ?, ?, ?, ?, ?)";
             PreparedStatement statement = conector.prepareStatement(sql);
             statement.setString(1, agendamento.getCliente().getNome());
             statement.setString(2, agendamento.getServico().getDescricao());
             statement.setFloat(3, agendamento.getValor());
             statement.setString(4, agendamento.getDataFormatada());
             statement.setString(5, agendamento.getHoraFormatada());
+            statement.setString(6, agendamento.getObservacao());
             statement.execute();
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO: " + ex);

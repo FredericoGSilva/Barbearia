@@ -34,7 +34,8 @@ public class AgendaHelper implements IHelper {
                 agendamento.getServico().getDescricao(),
                 agendamento.getValor(),
                 agendamento.getDataFormatada(),
-                agendamento.getHoraFormatada()
+                agendamento.getHoraFormatada(),
+                agendamento.getObservacao()
             });
         }
         
@@ -65,19 +66,26 @@ public class AgendaHelper implements IHelper {
     public Cliente obterCliente() {
         return (Cliente) view.getjComboBox_Cliente().getSelectedItem();
     }
-        // Essa função irá capturar os dados da interface Agenda para através do Controller e DAO os dados serem inseridos no banco de dados.
 
     @Override
-    public Agendamento obterModelo() { //DEU CERTO PQ TIREI O ID.
-        //int id = Integer.parseInt(view.getTxt_Id().getText());
+    public Agendamento obterModelo() { 
         Cliente cliente = obterCliente();
         Servico servico = obterServico();
         float valor = Float.parseFloat(view.getTxt_Valor().getText());
         String data = view.getTxt_Data().getText();
         String hora = view.getTxt_Hora().getText();
         String dataHora = data + " " + hora;
-        Agendamento agendamento = new Agendamento(cliente, servico, valor, dataHora);
+        String observacao = view.getjTextArea1_Observacao().getText();
+        Agendamento agendamento = new Agendamento(cliente, servico, valor, dataHora, observacao);
         return agendamento;
     }
-
+    
+    @Override
+    public void limparTelas() {
+        view.getTxt_Data().setText("");
+        view.getTxt_Hora().setText("");
+        view.getTxt_Valor().setText("");
+        view.getjTextArea1_Observacao().setText("");
+    }
+    
 }

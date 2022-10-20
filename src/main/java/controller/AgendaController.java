@@ -54,5 +54,6 @@ public class AgendaController {
     public void inserirDadosBanco() {
         AgendaDAO agendaDAO = new AgendaDAO();
         agendaDAO.inserirDados(helper.obterModelo());
+        helper.limparTelas();
     }
 }

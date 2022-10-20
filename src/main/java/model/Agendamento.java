@@ -22,8 +22,7 @@ public class Agendamento {
     private Date data;
     private String observacao;
 
-    public Agendamento(Cliente cliente, Servico servico, float valor, String data) {
-        //this.id = id;
+    public Agendamento(Cliente cliente, Servico servico, float valor, String data, String observacao) {
         this.cliente = cliente;
         this.servico = servico;
         this.valor = valor;
@@ -33,12 +32,13 @@ public class Agendamento {
             Logger.getLogger(Agendamento.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        // this.observacao = observacao;
+        this.observacao = observacao;
     }
     
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
-        this(cliente, servico, valor, data);
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) {
+        this(cliente, servico, valor, data, observacao);
         this.id = id;
+        
     }
     
     public Agendamento(int id, Cliente cliente) {

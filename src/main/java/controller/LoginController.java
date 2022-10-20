@@ -38,10 +38,12 @@ public class LoginController {
                 view.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Usuário ou senha inválidos.");
+                helper.limparTelas();
             }
         } catch (SQLException ex) {
-            view.mensagem("Erro na classe LoginController: " + ex);
+            view.mensagem("Erro na classe LoginController: " + ex); 
         }
        
     }
+    
 }
