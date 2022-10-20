@@ -43,7 +43,7 @@ public class AgendaDAO {
                 listaAgendamento.add(agendamento);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO: " + ex);
+            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO - recuperDados: " + ex);
         }
         return listaAgendamento;
     }
@@ -60,7 +60,18 @@ public class AgendaDAO {
             statement.setString(6, agendamento.getObservacao());
             statement.execute();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO: " + ex);
+            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO - inserirDados: " + ex);
+        }
+    }
+    
+    public void cancelarAgendamento(Agendamento agendamento) {
+        try {
+            String sql = "delete from tb_agendamento where id = ?";
+            PreparedStatement statement = conector.prepareStatement(sql);
+            statement.setInt(1, agendamento.getId());
+            statement.execute();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro na classe AgendaDAO - cancelarAgendamento: " + ex);
         }
     }
     
