@@ -14,6 +14,7 @@ import model.dao.AgendaDAO;
 import model.dao.ClienteDAO;
 import model.dao.ServicoDAO;
 import view.Agenda;
+import view.CancelaAgendamento;
 import view.MenuPrincipal;
 
 /**
@@ -69,6 +70,11 @@ public class AgendaController implements IController {
     public void cancelar() {
         view.dispose();
         MenuPrincipal acesso = new MenuPrincipal();
+        acesso.setVisible(true);
+    }
+    
+    public void cancelarAgendamentoView() {
+        CancelaAgendamento acesso = new CancelaAgendamento();
         acesso.setVisible(true);
     }
 }

@@ -184,7 +184,7 @@ public class Agenda extends javax.swing.JFrame {
     }//GEN-LAST:event_Button_AgendarActionPerformed
 
     private void Button_CancelarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CancelarAgendamentoActionPerformed
-        // TODO add your handling code here:
+        controller.cancelarAgendamentoView();
     }//GEN-LAST:event_Button_CancelarAgendamentoActionPerformed
 
     /**
