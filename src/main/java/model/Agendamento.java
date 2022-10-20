@@ -41,9 +41,8 @@ public class Agendamento {
         
     }
     
-    public Agendamento(int id, Cliente cliente) {
+    public Agendamento(int id) {
         this.id = id;
-        this.cliente = cliente;
     }
 
     public int getId() {

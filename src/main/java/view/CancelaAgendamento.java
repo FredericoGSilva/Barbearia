@@ -4,17 +4,20 @@
  */
 package view;
 
+import controller.CancelaAgendamentoController;
+
 /**
  *
  * @author Frederico
  */
 public class CancelaAgendamento extends javax.swing.JFrame {
-
+    private final CancelaAgendamentoController controller;
     /**
      * Creates new form Cancela
      */
     public CancelaAgendamento() {
         initComponents();
+        controller = new CancelaAgendamentoController(this);
     }
 
     /**
@@ -73,7 +76,7 @@ public class CancelaAgendamento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1_Desmarcar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_Desmarcar1ActionPerformed
-
+        controller.cancelarAgendamento();
     }//GEN-LAST:event_jButton1_Desmarcar1ActionPerformed
 
     /**
@@ -122,4 +125,15 @@ public class CancelaAgendamento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1_Id;
     private javax.swing.JTextField jTextField1_Id;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JTextField getjTextField1_Id() {
+        return jTextField1_Id;
+    }
+
+    public void setjTextField1_Id(javax.swing.JTextField jTextField1_Id) {
+        this.jTextField1_Id = jTextField1_Id;
+    }
+
+    
 }
+
