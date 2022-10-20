@@ -6,6 +6,7 @@ package controller;
 
 import controller.helper.AgendaHelper;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import model.Agendamento;
 import model.Cliente;
 import model.Servico;
@@ -19,15 +20,15 @@ import view.Agenda;
  * @author Frederico
  */
 public class AgendaController {
+
     private final Agenda view;
     private final AgendaHelper helper;
-    
-    
+
     public AgendaController(Agenda view) {
         this.view = view;
         this.helper = new AgendaHelper(view);
     }
-    
+
     public void atualizarTabela() {
         AgendaDAO agendaDAO = new AgendaDAO();
         ArrayList<Agendamento> listaAdendamento = agendaDAO.recuperDados();
@@ -39,21 +40,27 @@ public class AgendaController {
         ArrayList<Cliente> listaClientes = clienteDAO.recuperarDados();
         helper.preencherClientes(listaClientes);
     }
-    
+
     public void atualizarServico() {
         ServicoDAO servicoDAO = new ServicoDAO();
         ArrayList<Servico> listaServico = servicoDAO.recuperarDados();
         helper.preencherServicos(listaServico);
     }
-    
+
     public void atualizarValor() {
         Servico servico = helper.obterServico();
         helper.setarValor(servico.getValor());
     }
-    
+
     public void inserirDadosBanco() {
-        AgendaDAO agendaDAO = new AgendaDAO();
-        agendaDAO.inserirDados(helper.obterModelo());
-        helper.limparTelas();
+        try {
+            AgendaDAO agendaDAO = new AgendaDAO();
+            agendaDAO.inserirDados(helper.obterModelo());
+            helper.limparTelas();
+            atualizarTabela();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro AgendaController - inserirDadosBanco: " + e);
+        }
+
     }
 }
