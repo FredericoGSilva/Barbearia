@@ -17,7 +17,7 @@ import view.MenuPrincipal;
  *
  * @author Frederico
  */
-public class LoginController {
+public class LoginController implements IController {
     
     private final Login view;
     private final LoginHelper helper;
@@ -44,6 +44,11 @@ public class LoginController {
             view.mensagem("Erro na classe LoginController: " + ex); 
         }
        
+    }
+
+    @Override
+    public void cancelar() {
+        view.dispose();
     }
     
 }

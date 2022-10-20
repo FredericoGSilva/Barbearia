@@ -36,6 +36,7 @@ public class Login extends javax.swing.JFrame {
         Lbl_Login = new javax.swing.JLabel();
         Lbl_Usuario = new javax.swing.JLabel();
         Lbl_Senha = new javax.swing.JLabel();
+        jButton_Cancelar = new javax.swing.JButton();
         jButton_Entrar = new javax.swing.JButton();
         Lbl_PainelLogin = new javax.swing.JLabel();
         Lbl_Logo1 = new javax.swing.JLabel();
@@ -66,6 +67,18 @@ public class Login extends javax.swing.JFrame {
         Lbl_Senha.setText("Senha");
         getContentPane().add(Lbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 550, -1, -1));
 
+        jButton_Cancelar.setBackground(new java.awt.Color(204, 204, 204));
+        jButton_Cancelar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jButton_Cancelar.setForeground(new java.awt.Color(0, 0, 0));
+        jButton_Cancelar.setText("Cancelar");
+        jButton_Cancelar.setActionCommand("Cancelar");
+        jButton_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_CancelarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, 140, -1));
+
         jButton_Entrar.setBackground(new java.awt.Color(204, 204, 204));
         jButton_Entrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton_Entrar.setForeground(new java.awt.Color(0, 0, 0));
@@ -75,7 +88,7 @@ public class Login extends javax.swing.JFrame {
                 jButton_EntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton_Entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(282, 670, 260, -1));
+        getContentPane().add(jButton_Entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 680, 140, -1));
 
         Lbl_PainelLogin.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\painel-login.png")); // NOI18N
         getContentPane().add(Lbl_PainelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, -1, -1));
@@ -89,6 +102,10 @@ public class Login extends javax.swing.JFrame {
     private void jButton_EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_EntrarActionPerformed
         controller.usuarioLogin();
     }//GEN-LAST:event_jButton_EntrarActionPerformed
+
+    private void jButton_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CancelarActionPerformed
+        controller.cancelar();
+    }//GEN-LAST:event_jButton_CancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +149,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_Senha;
     private javax.swing.JLabel Lbl_Usuario;
     private javax.swing.JTextField Txt_Usuario;
+    private javax.swing.JButton jButton_Cancelar;
     private javax.swing.JButton jButton_Entrar;
     private javax.swing.JPasswordField jPassword_Senha;
     // End of variables declaration//GEN-END:variables
