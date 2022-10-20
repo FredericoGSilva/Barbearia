@@ -46,7 +46,7 @@ public class Agenda extends javax.swing.JFrame {
         Button_Agendar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1_Agendamentos = new javax.swing.JTable();
-        Button_Voltar = new javax.swing.JButton();
+        Button_Cancelar = new javax.swing.JButton();
         Lbl_AgendaPainelFundo1 = new javax.swing.JLabel();
         Lbl_Agenda = new javax.swing.JLabel();
 
@@ -139,16 +139,16 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 1170, 240));
 
-        Button_Voltar.setBackground(new java.awt.Color(102, 255, 102));
-        Button_Voltar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        Button_Voltar.setForeground(new java.awt.Color(255, 255, 255));
-        Button_Voltar.setText("Voltar");
-        Button_Voltar.addActionListener(new java.awt.event.ActionListener() {
+        Button_Cancelar.setBackground(new java.awt.Color(102, 255, 102));
+        Button_Cancelar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Button_Cancelar.setForeground(new java.awt.Color(255, 255, 255));
+        Button_Cancelar.setText("Cancelar");
+        Button_Cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button_VoltarActionPerformed(evt);
+                Button_CancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(Button_Voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 940, 420, -1));
+        getContentPane().add(Button_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 940, 420, -1));
 
         Lbl_AgendaPainelFundo1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos privados\\BarbeariaComentariosNetBeansYouTube\\refazendoBarbeariaAula\\src\\main\\java\\com\\mycompany\\refazendobarbeariaaula\\view\\img\\Agenda-PainelFundo.png")); // NOI18N
         getContentPane().add(Lbl_AgendaPainelFundo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, -1, 1030));
@@ -159,9 +159,9 @@ public class Agenda extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Button_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_VoltarActionPerformed
-
-    }//GEN-LAST:event_Button_VoltarActionPerformed
+    private void Button_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CancelarActionPerformed
+        controller.cancelar();
+    }//GEN-LAST:event_Button_CancelarActionPerformed
 
     private void jComboBox_ServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox_ServicoItemStateChanged
         controller.atualizarValor();
@@ -208,7 +208,7 @@ public class Agenda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_Agendar;
-    private javax.swing.JButton Button_Voltar;
+    private javax.swing.JButton Button_Cancelar;
     private javax.swing.JLabel Lbl_Agenda;
     private javax.swing.JLabel Lbl_AgendaPainelFundo1;
     private javax.swing.JLabel Lbl_Cliente;
@@ -299,5 +299,14 @@ public class Agenda extends javax.swing.JFrame {
         this.Txt_Id = Txt_Id;
     }
   */  
+
+    public javax.swing.JButton getButton_Cancelar() {
+        return Button_Cancelar;
+    }
+
+    public void setButton_Cancelar(javax.swing.JButton Button_Cancelar) {
+        this.Button_Cancelar = Button_Cancelar;
+    }
+    
 
 }

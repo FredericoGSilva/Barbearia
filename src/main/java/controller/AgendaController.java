@@ -14,12 +14,13 @@ import model.dao.AgendaDAO;
 import model.dao.ClienteDAO;
 import model.dao.ServicoDAO;
 import view.Agenda;
+import view.MenuPrincipal;
 
 /**
  *
  * @author Frederico
  */
-public class AgendaController {
+public class AgendaController implements IController {
 
     private final Agenda view;
     private final AgendaHelper helper;
@@ -62,5 +63,12 @@ public class AgendaController {
             JOptionPane.showMessageDialog(null, "Erro AgendaController - inserirDadosBanco: " + e);
         }
 
+    }
+
+    @Override
+    public void cancelar() {
+        view.dispose();
+        MenuPrincipal acesso = new MenuPrincipal();
+        acesso.setVisible(true);
     }
 }
