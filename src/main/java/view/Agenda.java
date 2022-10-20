@@ -46,6 +46,7 @@ public class Agenda extends javax.swing.JFrame {
         Button_Agendar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1_Agendamentos = new javax.swing.JTable();
+        Button_CancelarAgendamento = new javax.swing.JButton();
         Button_Cancelar = new javax.swing.JButton();
         Lbl_AgendaPainelFundo1 = new javax.swing.JLabel();
         Lbl_Agenda = new javax.swing.JLabel();
@@ -139,6 +140,17 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 650, 1170, 240));
 
+        Button_CancelarAgendamento.setBackground(new java.awt.Color(102, 255, 102));
+        Button_CancelarAgendamento.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Button_CancelarAgendamento.setForeground(new java.awt.Color(255, 255, 255));
+        Button_CancelarAgendamento.setText("Cancelar agendamento");
+        Button_CancelarAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_CancelarAgendamentoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Button_CancelarAgendamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 940, 420, -1));
+
         Button_Cancelar.setBackground(new java.awt.Color(102, 255, 102));
         Button_Cancelar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         Button_Cancelar.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,6 +182,10 @@ public class Agenda extends javax.swing.JFrame {
     private void Button_AgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_AgendarActionPerformed
         controller.inserirDadosBanco();
     }//GEN-LAST:event_Button_AgendarActionPerformed
+
+    private void Button_CancelarAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_CancelarAgendamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Button_CancelarAgendamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,6 +225,7 @@ public class Agenda extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_Agendar;
     private javax.swing.JButton Button_Cancelar;
+    private javax.swing.JButton Button_CancelarAgendamento;
     private javax.swing.JLabel Lbl_Agenda;
     private javax.swing.JLabel Lbl_AgendaPainelFundo1;
     private javax.swing.JLabel Lbl_Cliente;
