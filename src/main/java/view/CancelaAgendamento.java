@@ -62,6 +62,11 @@ public class CancelaAgendamento extends javax.swing.JFrame {
 
         jButton1_Cancelar.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jButton1_Cancelar.setText("Cancelar");
+        jButton1_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1_CancelarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 440, -1, -1));
 
         Lbl_AgendaPainelFundo1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Frederico\\Documents\\projetos públicos\\Barbearia NetBeans - Definitivo\\Barbearia2\\src\\main\\java\\view\\img\\Agenda-PainelFundo.png")); // NOI18N
@@ -78,6 +83,10 @@ public class CancelaAgendamento extends javax.swing.JFrame {
     private void jButton1_Desmarcar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_Desmarcar1ActionPerformed
         controller.cancelarAgendamento();
     }//GEN-LAST:event_jButton1_Desmarcar1ActionPerformed
+
+    private void jButton1_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_CancelarActionPerformed
+        controller.voltar();
+    }//GEN-LAST:event_jButton1_CancelarActionPerformed
 
     /**
      * @param args the command line arguments

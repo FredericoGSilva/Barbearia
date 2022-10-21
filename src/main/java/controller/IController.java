@@ -10,6 +10,6 @@ package controller;
  */
 public interface IController {
     
-    void cancelar();
+    void voltar();
     
 }

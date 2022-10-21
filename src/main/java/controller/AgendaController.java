@@ -67,7 +67,7 @@ public class AgendaController implements IController {
     }
 
     @Override
-    public void cancelar() {
+    public void voltar() {
         view.dispose();
         MenuPrincipal acesso = new MenuPrincipal();
         acesso.setVisible(true);

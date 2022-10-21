@@ -47,7 +47,7 @@ public class LoginController implements IController {
     }
 
     @Override
-    public void cancelar() {
+    public void voltar() {
         view.dispose();
     }
     

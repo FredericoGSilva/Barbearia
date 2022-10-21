@@ -36,7 +36,7 @@ public class Login extends javax.swing.JFrame {
         Lbl_Login = new javax.swing.JLabel();
         Lbl_Usuario = new javax.swing.JLabel();
         Lbl_Senha = new javax.swing.JLabel();
-        jButton_Cancelar = new javax.swing.JButton();
+        Button_Voltar = new javax.swing.JButton();
         jButton_Entrar = new javax.swing.JButton();
         Lbl_PainelLogin = new javax.swing.JLabel();
         Lbl_Logo1 = new javax.swing.JLabel();
@@ -67,17 +67,16 @@ public class Login extends javax.swing.JFrame {
         Lbl_Senha.setText("Senha");
         getContentPane().add(Lbl_Senha, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 550, -1, -1));
 
-        jButton_Cancelar.setBackground(new java.awt.Color(204, 204, 204));
-        jButton_Cancelar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton_Cancelar.setForeground(new java.awt.Color(0, 0, 0));
-        jButton_Cancelar.setText("Cancelar");
-        jButton_Cancelar.setActionCommand("Cancelar");
-        jButton_Cancelar.addActionListener(new java.awt.event.ActionListener() {
+        Button_Voltar.setBackground(new java.awt.Color(204, 204, 204));
+        Button_Voltar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        Button_Voltar.setForeground(new java.awt.Color(0, 0, 0));
+        Button_Voltar.setText("Voltar");
+        Button_Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_CancelarActionPerformed(evt);
+                Button_VoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, 140, -1));
+        getContentPane().add(Button_Voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 680, 140, -1));
 
         jButton_Entrar.setBackground(new java.awt.Color(204, 204, 204));
         jButton_Entrar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -103,9 +102,9 @@ public class Login extends javax.swing.JFrame {
         controller.usuarioLogin();
     }//GEN-LAST:event_jButton_EntrarActionPerformed
 
-    private void jButton_CancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_CancelarActionPerformed
-        controller.cancelar();
-    }//GEN-LAST:event_jButton_CancelarActionPerformed
+    private void Button_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_VoltarActionPerformed
+        controller.voltar();
+    }//GEN-LAST:event_Button_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,13 +142,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Button_Voltar;
     private javax.swing.JLabel Lbl_Login;
     private javax.swing.JLabel Lbl_Logo1;
     private javax.swing.JLabel Lbl_PainelLogin;
     private javax.swing.JLabel Lbl_Senha;
     private javax.swing.JLabel Lbl_Usuario;
     private javax.swing.JTextField Txt_Usuario;
-    private javax.swing.JButton jButton_Cancelar;
     private javax.swing.JButton jButton_Entrar;
     private javax.swing.JPasswordField jPassword_Senha;
     // End of variables declaration//GEN-END:variables
